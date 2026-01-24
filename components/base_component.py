@@ -1,4 +1,4 @@
-from elements.Input import Input
+from playwright.sync_api import expect
 
 
 class BaseComponent:
@@ -7,3 +7,8 @@ class BaseComponent:
 
     def is_visible(self):
         return expect(self.page).to_be_visible()
+
+
+
+
+
