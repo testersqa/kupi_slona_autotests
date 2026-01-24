@@ -8,3 +8,5 @@ class BaseControl:
     def is_visible(self):
         return expect(self.page).to_be_visible()
 
+
+
