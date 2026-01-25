@@ -1,11 +1,11 @@
 import allure
 
 from playwright.sync_api import expect
-from pages.base_page import BasePage
+from pages.element_page import ElemPage
 
 @allure.title("Верный переход по разделам в верхнего меню хэдере")
 def test_transfer_menu_up(page):
-    menu = BasePage(page, "https://kupislona-store.ru/")
+    menu = ElemPage(page, "https://kupislona-store.ru/")
 
     with allure.step("Открытие страницы https://kupislona-store.ru/"):
         menu.open()
