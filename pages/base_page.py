@@ -4,5 +4,4 @@ class BasePage:
         self.url = url
 
     def open(self):
-        self.page.goto(self.url)
-
+        return self.page.goto(self.url)
