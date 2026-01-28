@@ -1,6 +1,7 @@
 from components.base_component import BaseComponent
 from controls.button_search import ButtonSearch
 from controls.input_search import InputSearch
+from controls.cart import Cart
 
 
 class HeaderComponent(BaseComponent):
@@ -25,3 +26,8 @@ class HeaderComponent(BaseComponent):
     def clear_search_input(self):
         self.input_search.clear()
 
+    def get_cart(self):
+        return Cart(self.page)
+
+    def get_button_cart(self):
+        return Cart(self.page).get_button_cart_locator()
