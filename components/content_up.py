@@ -1,5 +1,5 @@
 from components.base_component import BaseComponent
-from control.menu_content_up import MenuContent
+from controls.menu_content_up import MenuContent
 
 class ContentUp(BaseComponent):
     def __init__(self, page):

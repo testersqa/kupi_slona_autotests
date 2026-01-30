@@ -1,4 +1,4 @@
-from control.base_control import BaseControl
+from controls.base_control import BaseControl
 
 
 class MenuContent(BaseControl):
