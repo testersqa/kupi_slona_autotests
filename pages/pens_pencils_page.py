@@ -5,7 +5,6 @@ class WritingProductPage(BasePage):
     def __init__(self, page, url):
         super().__init__(page, url)
 
-
     def get_product_by_title(self, title):
         return CartProduct(self.page, title)
 
