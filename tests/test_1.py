@@ -1,4 +1,3 @@
-import re
 import allure
 from components.menu_component import MenuComponent
 from pages.base_page import BasePage
