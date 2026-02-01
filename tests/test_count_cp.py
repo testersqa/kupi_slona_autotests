@@ -1,5 +1,3 @@
-import time
-
 import allure
 from playwright.sync_api import expect
 from pages.pens_pencils_page import WritingProductPage
@@ -14,7 +12,6 @@ def test_cart_product(page):
     expect(product).to_be_editable()
     expect(product).to_have_value("123456")
 
-    time.sleep(2)
 
 
 
