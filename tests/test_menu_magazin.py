@@ -1,3 +1,4 @@
+import re
 import allure
 from components.menu_component import MenuComponent
 from pages.base_page import BasePage
@@ -16,6 +17,4 @@ def test_has_title(page: Page):
 
     with allure.step("Нажатие на кнопку Магазины"):
         main_menu.click_button()
-
-
-
+        expect(page).to_have_url("https://kupislona-store.ru/content/adresa-magazinov")

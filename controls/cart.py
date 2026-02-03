@@ -11,6 +11,3 @@ class Cart(BaseControl):
 
     def get_cart_count_value(self):
         return self.cart_locator.locator("label")
-
-    # def get_product_in_cart(self, product_name: str):
-    #     return self.page.locator(f".cart-item:has-text('{product_name}')")

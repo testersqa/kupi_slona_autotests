@@ -19,7 +19,3 @@ class CartPage(BasePage):
         product_date = self.get_product_name_in_cart(product_name)
         count_input = product_date.locator('input[name*="qty"]')
         return count_input.get_attribute("value")
-
-    # def get_product_price_in_cart(self, product_name: str):
-    #     product_row = self.get_product_name_in_cart(product_name)
-    #     return product_row.locator(".price").text_content()
