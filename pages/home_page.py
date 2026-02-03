@@ -6,6 +6,7 @@ class HomePage(BasePage):
     def __init__(self, page):
         self.url = "https://kupislona-store.ru/"
         super().__init__(page, self.url)
+        # self.cart_button = page.locator("#block-uc-ajax-cart-delta-0")
 
     def open_home_page(self):
         self.page.goto(self.url)

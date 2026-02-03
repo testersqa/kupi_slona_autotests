@@ -11,3 +11,15 @@ class CartPage(BasePage):
 
     def get_message_empty_cart(self):
         return self.page.locator("#cart-form-pane")
+
+    def get_product_name_in_cart(self, product_name: str):
+        return self.page.locator(f"tr:has-text('{product_name}')")
+
+    def get_product_quantity(self, product_name):
+        product_date = self.get_product_name_in_cart(product_name)
+        count_input = product_date.locator('input[name*="qty"]')
+        return count_input.get_attribute("value")
+
+    # def get_product_price_in_cart(self, product_name: str):
+    #     product_row = self.get_product_name_in_cart(product_name)
+    #     return product_row.locator(".price").text_content()
