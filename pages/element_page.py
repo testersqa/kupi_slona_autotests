@@ -25,7 +25,7 @@ class ElemPage(BasePage):
         return LogoHeader(self.page)
 
     def click_by_logo(self):
-        self.get_logo().wrapper().click()
+        self.get_logo().click()
 
     def footer(self):
         self.page.locator('//*[@id = "footer-wrapper"]')

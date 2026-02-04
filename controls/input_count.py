@@ -3,9 +3,7 @@ from controls.base_control import BaseControl
 
 class InputCount(BaseControl):
     def __init__(self, page):
-        super().__init__(page)
-        self.page = page
-        self.locator_count = page.locator('//*[contains(@id, "edit-qty")]')
+        super().__init__(page, page.locator('//*[contains(@id, "edit-qty")]'))
 
     # def wrapper(self):
     #     return self.page.locator('//*[contains(@id, "edit-qty")]')
