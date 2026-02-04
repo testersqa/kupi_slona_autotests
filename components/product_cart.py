@@ -1,5 +1,6 @@
 from components.base_component import BaseComponent
 from controls.input_count import InputCount
+from controls.button_buy import ButtonBuy
 
 
 class CartProduct(BaseComponent):
@@ -16,3 +17,9 @@ class CartProduct(BaseComponent):
 
     def fill_input_count_by_title(self, count):
         self.get_input_count().locator_count.fill(count)
+
+    def get_button_buy(self):
+        return ButtonBuy(self.locator)
+
+    def click_button_buy(self):
+        self.get_button_buy().locator_button.click()
