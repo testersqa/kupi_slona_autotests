@@ -6,10 +6,9 @@ from controls.cart import Cart
 
 class HeaderComponent(BaseComponent):
     def __init__(self, page):
-        super().__init__(page)
+        super().__init__(page, page.locator("#header"))
         self.input_search = page.locator("#edit-search")
         self.button_search = page.locator("#edit-submit-search-result")
-        self.header = page.locator("#header")
 
     def click_search_input(self):
         self.input_search.click()
