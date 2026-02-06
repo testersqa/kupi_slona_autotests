@@ -10,3 +10,6 @@ class WritingProductPage(BasePage):
 
     def fill_count(self, title, count):
       return self.get_product_by_title(title).fill_input_count_by_title(count)
+
+    def click(self, title):
+        return self.get_product_by_title(title).click()

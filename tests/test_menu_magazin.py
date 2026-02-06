@@ -12,6 +12,7 @@ def test_has_title(page: Page):
     main_menu = MenuComponent(page)
 
     with allure.step("Открытие главной страницы"):
+        page.set_default_timeout(10000)
         base_page.open()
         expect(page).to_have_title(" «Купи слона» — интернет-магазин необычных подарков и милой канцелярии. Доставка по Москве и России.")
 
