@@ -1,7 +1,7 @@
 class BasePage:
-    def __init__(self, page, url):
-        self.page = page
-        self.url = url
+    def __init__(self, page: Page, url: str):
+        self.page: Page = page
+        self.url: str = url
 
     def open(self):
         return self.page.goto(self.url)

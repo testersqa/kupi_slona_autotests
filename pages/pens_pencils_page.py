@@ -2,9 +2,6 @@ from pages.base_page import BasePage
 from components.product_cart import CartProduct
 
 class WritingProductPage(BasePage):
-    '''
-    Страница раздела с канцелярией
-    '''
     def __init__(self, page, url):
         super().__init__(page, url)
 

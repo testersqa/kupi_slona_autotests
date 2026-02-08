@@ -1,6 +1,7 @@
-import allure
 import re
+import allure
 from playwright.sync_api import Page, expect
+
 from pages.base_page import BasePage
 from pages.page_search_product import PageSearchProduct
 from components.header_component import HeaderComponent

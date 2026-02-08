@@ -3,12 +3,8 @@ from components.header_component import HeaderComponent
 
 
 class HomePage(BasePage):
-    '''
-    Главная страница
-    '''
     def __init__(self, page):
-        self.url = "https://kupislona-store.ru/"
-        super().__init__(page, self.url)
+        super().__init__(page, "https://kupislona-store.ru/")
         # self.cart_button = page.locator("#block-uc-ajax-cart-delta-0")
 
     def open_home_page(self):

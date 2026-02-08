@@ -11,7 +11,7 @@ def test_cart_product_count(page):
     with allure.step('У товара "Автоматическая ручка «Bang cat»" ввести количество 1234567890'):
         main.fill_count('Автоматическая ручка «Bang cat»', "1234567890")
 
-    product = main.get_product_by_title('Автоматическая ручка «Bang cat»').get_input_count().wrapper
+    product = main.get_product_by_title('Автоматическая ручка «Bang cat»').get_input_count()
 
-    expect(product).to_be_editable()
-    expect(product).to_have_value("123456")
+    expect(product.wrapper).to_be_editable()
+    expect(product.wrapper).to_have_value("123456")
