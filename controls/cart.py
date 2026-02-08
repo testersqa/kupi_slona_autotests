@@ -1,9 +1,11 @@
 from playwright.sync_api import Page, Locator
-
 from controls.base_control import BaseControl
 
 
 class Cart(BaseControl):
+    '''
+    Класс описывающий контрол корзины в header
+    '''
     def __init__(self, page: Page,
                  paren_wrapper: Locator):
         super().__init__(page, paren_wrapper.locator("#block-uc-ajax-cart-delta-0"))

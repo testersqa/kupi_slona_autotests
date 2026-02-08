@@ -2,6 +2,9 @@ from pages.base_page import BasePage
 
 
 class ProductBuePage(BasePage):
+    '''
+    Страница Весь каталог
+    '''
     def __init__(self, page, url):
         super().__init__(page, url)
         self.page = page

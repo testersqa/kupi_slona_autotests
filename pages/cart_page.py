@@ -2,6 +2,9 @@ from pages.base_page import BasePage
 
 
 class CartPage(BasePage):
+    '''
+    Страница корзины
+    '''
     def __init__(self, page):
         self.url = "https://kupislona-store.ru/cart"
         super().__init__(page, self.url)

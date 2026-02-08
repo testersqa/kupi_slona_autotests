@@ -3,6 +3,9 @@ from controls.cart import Cart
 
 
 class HeaderComponent(BaseComponent):
+    '''
+    Класс Компонентов Header на сайте. Это верхнее меню, логотип, строка поиска, меню с категориями
+    '''
     def __init__(self, page):
         super().__init__(page, page.locator("#header"))
         self.input_search = page.locator("#edit-search")

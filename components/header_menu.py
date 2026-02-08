@@ -3,6 +3,9 @@ from components.base_component import BaseComponent
 
 
 class HeaderMenu(BaseComponent):
+    '''
+    Класс меню на сайте с категориями товара.
+    '''
     def __init__(self, page):
         super().__init__(page, page.locator("#header_menu"))
 
