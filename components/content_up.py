@@ -1,13 +1,10 @@
 from components.base_component import BaseComponent
-from controls.menu_content_up import MenuContent
 
 class ContentUp(BaseComponent):
-    def __init__(self, page):
+    def __init__(self, page, title):
         super().__init__(page, page.locator('.menu.clearfix'))
+        self.title = title
 
-    def get_menu_by_title(self, title):
-        return MenuContent(self.page, title)
-
-    # f"a:has-text('{title}')"
-
+    def get_menu_by_title(self):
+        return self.page.get_by_role('link', name=f'{self.title}')
 
