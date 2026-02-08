@@ -1,6 +1,6 @@
 from components.base_component import BaseComponent
 from controls.input_count import InputCount
-from controls.button_buy import ButtonBuy
+from controls.all_button import AllButton
 
 
 class CartProduct(BaseComponent):
@@ -18,7 +18,7 @@ class CartProduct(BaseComponent):
         self.get_input_count().wrapper.fill(count)
 
     def get_button_buy(self):
-        return ButtonBuy(self.wrapper)
+        return AllButton(self.page, self.wrapper)
 
     def click_button_buy(self):
         self.get_button_buy().wrapper.click()
