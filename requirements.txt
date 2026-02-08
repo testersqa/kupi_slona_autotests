@@ -1,4 +1,3 @@
-allure-python-commons
 pytest
 playwright
 allure-pytest

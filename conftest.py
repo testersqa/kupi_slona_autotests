@@ -5,9 +5,8 @@ import pytest
 @pytest.fixture(scope="function", autouse=False)
 def page():
     playwright = sync_playwright().start()
-    browser = playwright.chromium.launch(headless=False, args=['--start-maximized'])
-    context = browser.new_context(no_viewport=True)
-    page = context.new_page()
+    browser = playwright.chromium.launch(headless=False)
+    page = browser.new_page()
     yield page
     browser.close()
-    playwright.stop()  
+    playwright.stop()
