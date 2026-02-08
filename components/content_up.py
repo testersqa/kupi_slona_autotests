@@ -1,6 +1,9 @@
 from components.base_component import BaseComponent
 
 class ContentUp(BaseComponent):
+    '''
+    Класс верхнего меню на сайте. Метод получает название меню по названию
+    '''
     def __init__(self, page, title):
         super().__init__(page, page.locator('.menu.clearfix'))
         self.title = title

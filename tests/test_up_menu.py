@@ -1,5 +1,4 @@
 import allure
-
 from playwright.sync_api import expect
 from pages.element_page import ElemPage
 

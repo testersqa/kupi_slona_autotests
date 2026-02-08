@@ -24,7 +24,7 @@ class HeaderComponent(BaseComponent):
         self.input_search.clear()
 
     def get_cart(self):
-        return Cart(self.page)
+        return Cart(self.page, self.wrapper)
 
     def get_button_cart(self):
-        return Cart(self.page).get_button_cart_locator()
+        return Cart(self.page, self.wrapper).get_button_cart_locator()
