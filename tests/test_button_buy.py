@@ -12,7 +12,7 @@ def test_click_button_buy(page: Page):
     base_page = BasePage(page, "https://kupislona-store.ru/")
     page_all_catalog = PageAllCategory(page, "https://kupislona-store.ru/katalog/all")
     cart_page = CartPage(page)
-    header_menu = HeaderMenu(page)
+    header_menu = HeaderMenu(page, )
     name_category = "Весь каталог"
     name_product = 'Блокнот «Охотник»'
 

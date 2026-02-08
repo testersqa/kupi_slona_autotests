@@ -1,7 +1,5 @@
 import allure
-
 from playwright.sync_api import expect, Page
-
 from conftest import page
 from pages.product_buy_page import ProductBuePage
 

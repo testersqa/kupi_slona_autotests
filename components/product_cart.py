@@ -8,11 +8,8 @@ class CartProduct(BaseComponent):
         self.title = title
         super().__init__(page, page.locator(f'//a[contains(text(), "{self.title}")]/ancestor::li'))
 
-    # def wrapper(self):
-    #     return self.page.locator(f'//a[contains(text(), "{self.title}")]/ancestor::li')
-
     def get_input_count(self):
-        return InputCount(self.wrapper)
+        return InputCount(self.page, self.wrapper)
 
     def fill_input_count_by_title(self, count):
         self.get_input_count().wrapper.fill(count)

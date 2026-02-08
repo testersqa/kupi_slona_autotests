@@ -4,22 +4,25 @@ from components.logo import LogoHeader
 
 
 class ElemPage(BasePage):
+    '''
+    Страница с взаимодействиями для элементов header
+    '''
     def __init__(self, page, url):
         super().__init__(page, url)
         self.page = page
         self.url = url
 
     def header(self):
-        self.page.locator('//*[@id = "header"]')
+        self.page.locator("#header")
 
     def get_header_menu_by_title(self, title):
-        return self.page.locator('//*[@id="superfish-1"]').get_by_role("link", name=title)
+        return self.page.locator("#superfish-1").get_by_role("link", name=title)
 
-    def get_menu_up(self):
-        return ContentUp(self.page)
+    def get_menu_up_by_title(self, title):
+        return ContentUp(self.page, self.page.locator("#header"), title)
 
     def click_menu_up_by_title(self, title):
-        self.get_menu_up().get_menu_by_title(title).click()
+        self.get_menu_up_by_title(title).get_menu_by_title().click()
 
     def get_logo(self):
         return LogoHeader(self.page)
@@ -28,4 +31,4 @@ class ElemPage(BasePage):
         self.get_logo().click()
 
     def footer(self):
-        self.page.locator('//*[@id = "footer-wrapper"]')
+        self.page.locator("#footer-wrapper")

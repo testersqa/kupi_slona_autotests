@@ -1,5 +1,5 @@
-from playwright.sync_api import expect
 import allure
+from playwright.sync_api import expect
 from pages.cart_page import CartPage
 from pages.home_page import HomePage
 
@@ -13,7 +13,7 @@ def test_cart_page(page):
     with allure.step("Открыть сайт https://kupislona-store.ru"):
         home_page.open_home_page()
 
-    expect(home_page.get_header().get_cart().get_cart_count_value()).to_have_text("0")
+    expect(home_page.get_header().get_cart().get_cart_count_value()).to_have_value("0")
 
     with allure.step("В хедере нажать на иконку корзины"):
         home_page.click_button_cart()
