@@ -1,6 +1,4 @@
 from components.base_component import BaseComponent
-from controls.button_search import ButtonSearch
-from controls.input_search import InputSearch
 from controls.cart import Cart
 
 

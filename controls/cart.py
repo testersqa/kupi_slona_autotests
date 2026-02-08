@@ -6,7 +6,7 @@ class Cart(BaseControl):
         super().__init__(page, page.locator("#block-uc-ajax-cart-delta-0"))
 
     def get_button_cart_locator(self):
-        return self.cart_locator.locator("img.cart_icon")
+        return self.page.locator("img.cart_icon")
 
     def get_cart_count_value(self):
-        return self.cart_locator.locator("label")
+        return self.page.locator("label")

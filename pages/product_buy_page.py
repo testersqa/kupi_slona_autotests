@@ -1,4 +1,3 @@
-from components.product_component import ProductComponent
 from pages.base_page import BasePage
 
 
@@ -8,12 +7,11 @@ class ProductBuePage(BasePage):
         self.page = page
         self.url = url
 
-
     def open(self):
         self.page.goto(self.url)
 
     def get_product_by_title(self, title):
-        return self.page.locator('//*[@id="block-system-main"]').get_by_role("link", name=title)
+        return self.page.locator("#block-system-main").get_by_role("link", name=title)
 
     def set_quantity(self):
         qty_input_locator = self.page.locator('#edit-qty--2')
