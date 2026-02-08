@@ -13,12 +13,12 @@ def test_buy_product_with_zero_quantity(page):
         expect(page).to_have_title("| Купи слона - Магазины классных вещиц")
 
     with allure.step("Шаг 2: Под товаром «Блокнот «Охотник»» очистить поле ввода количества товаров"):
-        product.set_quantity()
+        product.set_quantity('')
         locator = page.locator("#edit-qty--2")
         expect(locator).to_have_value("")
 
     with allure.step("Шаг 3: ввести значение «0» в поле количество товаров"):
-        product.set_quantity0("0")
+        product.set_quantity("0")
         locator = page.locator("#edit-qty--2")
         expect(locator).to_have_value("0")
 

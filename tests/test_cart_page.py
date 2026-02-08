@@ -13,11 +13,11 @@ def test_cart_page(page):
     with allure.step("Открыть сайт https://kupislona-store.ru"):
         home_page.open_home_page()
 
-    expect(home_page.get_header().get_cart().get_cart_count_value()).to_have_value("0")
+        expect(home_page.get_header().get_cart().get_cart_count_value()).to_have_text("0")
 
     with allure.step("В хедере нажать на иконку корзины"):
         home_page.click_button_cart()
 
-    expect(page).to_have_url("https://kupislona-store.ru/cart")
-    expect(cart_page.get_title()).to_have_text("Корзина")
-    expect(cart_page.get_message_empty_cart()).to_have_text("В Вашей корзине нет товаров.")
+        expect(page).to_have_url("https://kupislona-store.ru/cart")
+        expect(cart_page.get_title()).to_have_text("Корзина")
+        expect(cart_page.get_message_empty_cart()).to_have_text("В Вашей корзине нет товаров.")

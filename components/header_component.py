@@ -11,8 +11,11 @@ class HeaderComponent(BaseComponent):
         self.input_search = page.locator("#edit-search")
         self.button_search = page.locator("#edit-submit-search-result")
 
+    def get_search_input(self):
+        return self.input_search
+
     def click_search_input(self):
-        self.input_search.click()
+        self.get_search_input().click()
 
     def fill_name_product(self, text: str):
         self.input_search.fill(text)
