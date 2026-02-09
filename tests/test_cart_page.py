@@ -7,13 +7,13 @@ from pages.home_page import HomePage
 @allure.title("Тестирование корзины")
 @allure.description("Проверка отображения пустой корзины и перехода на страницу корзины")
 def test_cart_page(page):
-    home_page = HomePage(page)
-    cart_page = CartPage(page)
+    home_page = HomePage(page, "https://kupislona-store.ru/")
+    cart_page = CartPage(page, "https://kupislona-store.ru/cart")
 
     with allure.step("Открыть сайт https://kupislona-store.ru"):
-        home_page.open_home_page()
+        home_page.open()
 
-        expect(home_page.get_header().get_cart().get_cart_count_value()).to_have_text("0")
+        expect(home_page.get_header().get_quantity_in_cart()).to_have_text("0")
 
     with allure.step("В хедере нажать на иконку корзины"):
         home_page.click_button_cart()

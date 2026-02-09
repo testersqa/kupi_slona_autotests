@@ -1,5 +1,4 @@
 from components.base_component import BaseComponent
-from controls.cart import Cart
 
 
 class HeaderComponent(BaseComponent):
@@ -10,6 +9,7 @@ class HeaderComponent(BaseComponent):
         super().__init__(page, page.locator("#header"))
         self.input_search = page.locator("#edit-search")
         self.button_search = page.locator("#edit-submit-search-result")
+        self.block_cart = page.locator(".cart_block")
 
     def get_search_input(self):
         return self.input_search
@@ -29,8 +29,8 @@ class HeaderComponent(BaseComponent):
     def clear_search_input(self):
         self.input_search.clear()
 
-    def get_cart(self):
-        return Cart(self.page, self.wrapper)
-
     def get_button_cart(self):
-        return Cart(self.page, self.wrapper).get_button_cart_locator()
+        return self.block_cart.locator('.cart_icon')
+
+    def get_quantity_in_cart(self):
+        return self.block_cart.locator("label")
