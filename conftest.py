@@ -9,4 +9,4 @@ def page():
     page = browser.new_page()
     yield page
     browser.close()
-    playwright.stop()  
+    playwright.stop()
