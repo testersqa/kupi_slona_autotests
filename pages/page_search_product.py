@@ -2,6 +2,7 @@ from pages.base_page import BasePage
 
 
 class PageSearchProduct(BasePage):
+    """Страница с результатами поиска"""
     def __init__(self, page, url):
         super().__init__(page, url)
         self.cards_product = page.locator('.item-list li')

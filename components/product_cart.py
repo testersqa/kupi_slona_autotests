@@ -4,6 +4,7 @@ from controls.all_button import AllButton
 
 
 class CartProduct(BaseComponent):
+    """Карточка товара"""
     def __init__(self, page, title):
         self.title = title
         super().__init__(page, page.locator(f'//a[contains(text(), "{self.title}")]/ancestor::li'))
