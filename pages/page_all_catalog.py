@@ -3,6 +3,7 @@ from components.product_cart import CartProduct
 
 
 class PageAllCategory(BasePage):
+    """ Страница весь каталог ищет товар на странице по названию """
     def __init__(self, page, url):
         super().__init__(page, url)
         self.page_title = page.locator("#page-title")
