@@ -10,7 +10,7 @@ from components.header_component import HeaderComponent
 
 def test_search_input(page: Page):
     text = 'ывдмтав'
-    home_page = HomePage(page)
+    home_page = HomePage(page, "https://kupislona-store.ru/")
     header = home_page.get_header()
     seacrh_field = header.get_search_input()
 

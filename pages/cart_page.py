@@ -5,9 +5,8 @@ class CartPage(BasePage):
     '''
     Страница корзины
     '''
-    def __init__(self, page):
-        self.url = "https://kupislona-store.ru/cart"
-        super().__init__(page, self.url)
+    def __init__(self, page, url):
+        super().__init__(page, url)
 
     def get_title(self):
         return self.page.locator("h1")
